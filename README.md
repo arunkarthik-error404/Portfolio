@@ -30,7 +30,7 @@ npm run lint
 - Lenis is driven by the GSAP ticker (`SmoothScroll` provider) so ScrollTrigger stays in sync.
 - All motion lives inside `gsap.matchMedia` — `prefers-reduced-motion` users get static content with native scroll.
 - The preloader is gated behind a `.js` html class set by an inline script, so no-JS visitors never see it; it plays once per session.
-- The contact form posts to FormSubmit (`lib/content.ts` → `site.formEndpoint`) with a honeypot field.
+- The contact form posts to `/api/contact` (`app/api/contact/route.ts`), which sends email via Resend (needs `RESEND_API_KEY`), with a honeypot field.
 
 ## Deployment
 

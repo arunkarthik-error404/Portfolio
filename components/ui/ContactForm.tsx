@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { site } from "@/lib/content";
 import { MagneticButton } from "./MagneticButton";
 
 import { trackEvent } from "@/lib/analytics";
@@ -23,18 +22,16 @@ export function ContactForm() {
     setStatus("pending");
     trackEvent("generate_lead", { category: "contact", label: "form_attempt" });
     try {
-      const res = await fetch(site.formEndpoint, {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           name: data.name,
           email: data.email,
           message: data.message,
-          _subject: `Portfolio inquiry from ${data.name}`,
-          _captcha: "false",
         }),
       });
-      if (!res.ok) throw new Error(`FormSubmit responded ${res.status}`);
+      if (!res.ok) throw new Error(`Contact API responded ${res.status}`);
       setStatus("success");
       trackEvent("contact_form_success", { category: "contact", label: "form_submitted" });
       form.reset();

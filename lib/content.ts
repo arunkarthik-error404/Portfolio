@@ -10,8 +10,6 @@ export const site = {
   description:
     "Arun Karthik BT is an AI Engineer building production LLM systems — multi-agent orchestration, RAG and hybrid retrieval, real-time voice agents, and the FastAPI backends that serve them.",
   gaId: "",
-  // TODO: FormSubmit emails an activation link to this address on the first submission.
-  formEndpoint: "https://formsubmit.co/ajax/arunkarthikbalakrishnan@gmail.com",
 } as const;
 
 export const person = {

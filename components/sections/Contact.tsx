@@ -4,8 +4,8 @@ import { ContactForm } from "@/components/ui/ContactForm";
 const channels = [
   { label: "Email", value: person.email, href: `mailto:${person.email}` },
   { label: "Phone", value: person.phone, href: `tel:${person.phoneHref}` },
-  { label: "LinkedIn", value: "mothilal-m", href: person.links.linkedin },
-  { label: "GitHub", value: "Mothilal-M", href: person.links.github },
+  { label: "LinkedIn", value: "arun-karthik", href: person.links.linkedin },
+  { label: "GitHub", value: "arunkarthik-error404", href: person.links.github },
 ];
 
 export function Contact() {

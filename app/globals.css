@@ -1,19 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  /*
-   * Single-accent design: swap --color-accent (and -soft) to retheme
-   * the whole site. Alternative accent: electric tangerine #FF5C1A.
-   */
-  --color-base: #0f0e0c;
-  --color-surface: #171511;
-  --color-surface-2: #201d18;
-  --color-border: #2b2722;
-  --color-text: #f2efe8;
-  --color-muted: #a39d92;
-  --color-accent: #d6ff3f;
-  --color-accent-soft: rgb(214 255 63 / 12%);
-  --color-accent-ink: #0f0e0c;
+  /* Palette: black, white, red (accent) and blue (secondary). */
+  --color-base: #050506;
+  --color-surface: #0e0e11;
+  --color-surface-2: #17171c;
+  --color-border: #26262d;
+  --color-text: #f7f7f8;
+  --color-muted: #9a9aa5;
+  --color-accent: #ff2e3f;
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  --color-accent-ink: #ffffff;
+  --color-blue: #2f7bff;
 
   --font-display: var(--font-bricolage);
   --font-sans: var(--font-instrument);
@@ -128,7 +126,7 @@ body[data-custom-cursor="true"] button {
 .node-active {
   border-color: var(--color-accent);
   background: var(--color-accent);
-  box-shadow: 0 0 12px rgb(214 255 63 / 50%);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--color-accent) 50%, transparent);
   transition: all 0.4s ease;
 }
 

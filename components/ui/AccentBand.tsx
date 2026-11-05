@@ -5,7 +5,7 @@ import { Marquee } from "./Marquee";
 export function AccentBand() {
   return (
     <div aria-hidden className="relative -mx-4 overflow-hidden py-10">
-      <div className="-rotate-2 bg-accent shadow-[0_0_60px_rgb(214_255_63/0.25)]">
+      <div className="-rotate-2 bg-accent shadow-[0_0_60px_color-mix(in_srgb,var(--color-accent)_25%,transparent)]">
         <Marquee
           items={marquee.band}
           separator="✦"

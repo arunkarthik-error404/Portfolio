@@ -29,7 +29,7 @@ function mulberry32(seed: number) {
 export function ParticleField({
   count,
   interactive,
-  color = "#d6ff3f",
+  color = "#ff2e3f",
   speedMultiplier = 1,
 }: ParticleFieldProps) {
   const pointsRef = useRef<THREE.Points>(null);

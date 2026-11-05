@@ -7,7 +7,7 @@ import { SceneControls } from "@/components/three/SceneControls";
 /**
  * Sticky full-viewport hero: the rest of the page slides over it like
  * a sheet (curtain stack, see page.tsx). Full-bleed 3D scene with the
- * MOTHILAL / ENGINEER lockup composed over it.
+ * ARUN / KARTHIK lockup composed over it.
  */
 export function Hero() {
   return (
@@ -35,7 +35,7 @@ export function Hero() {
           {person.availability}
         </p>
 
-        {/* Lockup: MOTHILAL solid / ENGINEER outlined — both 8 chars wide */}
+        {/* Lockup: ARUN solid / KARTHIK outlined */}
         <div className="my-auto">
           <h1
             aria-label={`${person.name} — ${person.role}`}
@@ -43,13 +43,13 @@ export function Hero() {
             className="font-display text-display font-bold uppercase leading-[0.86] tracking-tight text-text"
           >
             <span className="sr-only">
-              {`${person.name} — ${person.role} & Python Developer | Backend Expert`}
+              {`${person.name} — ${person.role} | LLM Agents, RAG & Voice AI`}
             </span>
             <span aria-hidden className="block">
-              Mothilal
+              Arun
             </span>
             <span aria-hidden className="flex items-baseline gap-[0.06em]">
-              <span className="text-outline">Engineer</span>
+              <span className="text-outline">Karthik</span>
               <span className="text-accent">.</span>
             </span>
           </h1>
@@ -57,7 +57,7 @@ export function Hero() {
             data-animate="hero-role"
             className="mt-5 font-mono text-xs uppercase tracking-[0.35em] text-accent md:text-sm"
           >
-            {`// software engineer @ ${person.company}`}
+            {`// ai engineer @ ${person.company}`}
           </p>
         </div>
 

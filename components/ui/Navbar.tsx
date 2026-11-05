@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import clsx from "clsx";
-import { nav } from "@/lib/content";
+import { nav, person } from "@/lib/content";
 import { MagneticButton } from "./MagneticButton";
 
 export function Navbar() {
@@ -41,10 +41,10 @@ export function Navbar() {
           href="#home"
           className="font-display text-2xl font-bold tracking-tight text-text"
           data-cursor="hover"
-          aria-label="Mothilal M — home"
+          aria-label="Arun Karthik BT — home"
           onClick={() => setOpen(false)}
         >
-          M<span className="text-accent">.</span>
+          {person.initials}<span className="text-accent">.</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">

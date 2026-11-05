@@ -3,14 +3,14 @@ import Link from "next/link";
 import { person, site, timeline, skillCategories, projects } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: `Resume — ${person.name} | ${person.role} & Python Developer`,
-  description: `Official resume of ${person.name}, ${person.role} at ${person.company}. Specializing in Python, FastAPI, GCP cloud infrastructure, and scalable microservices.`,
+  title: `Resume — ${person.name} | ${person.role}`,
+  description: `Official resume of ${person.name}, ${person.role} at ${person.company}. Specializing in LLM agents, RAG, voice AI, and FastAPI backends.`,
   alternates: {
     canonical: "/resume",
   },
   openGraph: {
     title: `Resume — ${person.name}`,
-    description: `Official resume and career history of ${person.name}, Software Engineer.`,
+    description: `Official resume and career history of ${person.name}, AI Engineer.`,
     url: `${site.url}/resume`,
     type: "profile",
   },
@@ -102,7 +102,7 @@ export default function ResumePage() {
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-accent"
               >
-                mothilal.dev
+                {site.url.replace("https://", "")}
               </a>
               <span>·</span>
               <a
@@ -111,7 +111,7 @@ export default function ResumePage() {
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-accent"
               >
-                linkedin.com/in/mothilal-m
+                linkedin.com/in/arun-karthik-0aa085426
               </a>
               <span>·</span>
               <a
@@ -120,7 +120,7 @@ export default function ResumePage() {
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-accent"
               >
-                github.com/Mothilal-M
+                github.com/arunkarthik-error404
               </a>
             </div>
           </header>
@@ -131,10 +131,11 @@ export default function ResumePage() {
               [01] Professional Summary
             </h2>
             <p className="mt-4 leading-relaxed text-muted print:text-black">
-              Software Engineer and Python Developer specializing in backend systems,
-              FastAPI microservices, Docker containerization, and cloud infrastructure on Google
-              Cloud Platform (GCP). Experienced in building resilient, high-speed APIs, database
-              scaling, and zero-drift deployments for fast-moving product teams.
+              AI Engineer with hands-on experience building and shipping production LLM systems —
+              multi-agent orchestration, RAG and hybrid retrieval, and real-time voice agents.
+              Designs agentic backends with LangGraph, AgentFlow and MCP/FastMCP, drives structured
+              extraction over large document corpora with Gemini and Vertex AI, and cost-optimises
+              inference by replacing LLM calls with deterministic parsers where accuracy allows.
             </p>
           </section>
 
@@ -147,7 +148,7 @@ export default function ResumePage() {
               {timeline
                 .filter((item) => item.kind === "work")
                 .map((job) => (
-                  <div key={job.org}>
+                  <div key={`${job.org}-${job.start}`}>
                     <div className="flex flex-col justify-between sm:flex-row sm:items-baseline">
                       <h3 className="font-display text-xl font-bold text-text print:text-black">
                         {job.title}
@@ -182,7 +183,7 @@ export default function ResumePage() {
                         {edu.title}
                       </h3>
                       <span className="font-mono text-xs text-accent print:text-black">
-                        {edu.start} — {edu.end}
+                        {edu.start ? `${edu.start} — ${edu.end}` : ""}
                       </span>
                     </div>
                     <p className="mt-1 font-mono text-xs text-muted print:text-black/80">
@@ -264,7 +265,7 @@ export default function ResumePage() {
           {/* Footer note */}
           <footer className="border-t border-border pt-8 font-mono text-xs text-muted print:hidden">
             <p>
-              Available for full-time backend and platform engineering roles. Reach out at{" "}
+              Open to AI engineering roles. Reach out at{" "}
               <a href={`mailto:${person.email}`} className="text-accent underline">
                 {person.email}
               </a>

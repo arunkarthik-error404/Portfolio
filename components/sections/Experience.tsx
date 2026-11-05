@@ -18,7 +18,7 @@ export function Experience() {
 
           <ol className="space-y-16">
             {timeline.map((entry) => (
-              <li key={entry.org} data-animate="timeline-entry" className="relative pl-10 md:pl-16">
+              <li key={`${entry.org}-${entry.start}`} data-animate="timeline-entry" className="relative pl-10 md:pl-16">
                 {/* Node */}
                 <span
                   aria-hidden
@@ -34,7 +34,7 @@ export function Experience() {
                 </span>
 
                 <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
-                  {entry.start} — {entry.end}
+                  {entry.start ? `${entry.start} — ${entry.end}` : "Education"}
                 </p>
                 <h3 className="mt-3 font-display text-h3 leading-tight tracking-tight text-text">
                   {entry.title}

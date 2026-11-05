@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import {
   sceneStore,
   useSceneConfig,
   type ColorTheme,
+  THEME_INK,
   type MeshMode,
   type ParticleMode,
   type SpeedMode,
@@ -31,14 +32,21 @@ const PARTICLE_OPTIONS: { label: string; value: ParticleMode }[] = [
 ];
 
 const THEME_OPTIONS: { label: string; value: ColorTheme; hex: string }[] = [
-  { label: "Lime", value: "lime", hex: "#d6ff3f" },
-  { label: "Cyan", value: "cyan", hex: "#38bdf8" },
-  { label: "Amber", value: "amber", hex: "#fbbf24" },
+  { label: "Red", value: "red", hex: "#ff2e3f" },
+  { label: "Blue", value: "blue", hex: "#2f7bff" },
+  { label: "White", value: "white", hex: "#f7f7f8" },
 ];
 
 export function SceneControls() {
   const config = useSceneConfig();
   const [expanded, setExpanded] = useState(false);
+
+  // The hue pick retints the whole site, not just the 3D scene.
+  useEffect(() => {
+    const root = document.documentElement.style;
+    root.setProperty("--color-accent", config.colorHex);
+    root.setProperty("--color-accent-ink", THEME_INK[config.theme]);
+  }, [config.colorHex, config.theme]);
 
   return (
     <div className="absolute right-5 bottom-16 z-20 md:right-10">

@@ -11,7 +11,7 @@ export function SceneFallback() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 65% 45%, rgb(214 255 63 / 7%), transparent 70%)," +
+            "radial-gradient(ellipse 60% 50% at 65% 45%, color-mix(in srgb, var(--color-accent) 7%, transparent), transparent 70%)," +
             "radial-gradient(ellipse 50% 60% at 70% 60%, rgb(32 29 24 / 80%), transparent 75%)",
         }}
       />

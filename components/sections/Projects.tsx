@@ -12,7 +12,7 @@ export function Projects() {
   return (
     <section id="work" className="py-section">
       <div className="mx-auto w-full max-w-[90rem] px-6 md:px-12">
-        <SectionHeading index="04" eyebrow="Selected work" title="Built to ship, built to last." />
+        <SectionHeading index="04" eyebrow="Selected work" title="Built to ship, built to scale." />
 
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {projects.map((project, i) => (

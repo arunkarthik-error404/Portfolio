@@ -4,7 +4,7 @@ export async function GET() {
   return NextResponse.json(
     {
       status: "healthy",
-      service: "mothilal-portfolio-api",
+      service: "arun-portfolio-api",
       version: "2.0.0",
       timestamp: new Date().toISOString(),
       uptime: "99.99%",

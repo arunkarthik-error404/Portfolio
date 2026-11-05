@@ -10,7 +10,7 @@ export function About() {
           <div className="overflow-hidden rounded-card border border-border">
             <Image
               src={person.portrait}
-              alt={`${person.name} — Software Engineer and Python Developer portrait`}
+              alt={`${person.name} — AI Engineer portrait`}
               width={640}
               height={640}
               className="aspect-square w-full object-cover"
@@ -25,7 +25,7 @@ export function About() {
         </div>
 
         <div>
-          <SectionHeading index="01" eyebrow="About" title="Systems that stay reliable as they grow." />
+          <SectionHeading index="01" eyebrow="About" title="Agents that work outside the demo." />
           <p
             data-animate="fill-text"
             className="mt-10 max-w-2xl font-display text-h3 leading-snug tracking-tight text-text"

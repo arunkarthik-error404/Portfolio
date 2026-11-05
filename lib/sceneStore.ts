@@ -5,7 +5,7 @@ import { useSyncExternalStore } from "react";
 export type MeshMode = "solid" | "wireframe" | "crystal";
 export type SpeedMode = 0.5 | 1 | 2.5;
 export type ParticleMode = "normal" | "supernova" | "off";
-export type ColorTheme = "lime" | "cyan" | "amber";
+export type ColorTheme = "red" | "blue" | "white";
 
 export interface SceneConfig {
   meshMode: MeshMode;
@@ -16,17 +16,24 @@ export interface SceneConfig {
 }
 
 const THEME_COLORS: Record<ColorTheme, string> = {
-  lime: "#d6ff3f",
-  cyan: "#38bdf8",
-  amber: "#fbbf24",
+  red: "#ff2e3f",
+  blue: "#2f7bff",
+  white: "#f7f7f8",
+};
+
+/** Text colour that stays readable on top of each accent. */
+export const THEME_INK: Record<ColorTheme, string> = {
+  red: "#ffffff",
+  blue: "#ffffff",
+  white: "#050506",
 };
 
 const DEFAULT_CONFIG: SceneConfig = {
   meshMode: "solid",
   speed: 1,
   particleMode: "normal",
-  theme: "lime",
-  colorHex: THEME_COLORS.lime,
+  theme: "red",
+  colorHex: THEME_COLORS.red,
 };
 
 let currentConfig: SceneConfig = { ...DEFAULT_CONFIG };
@@ -39,8 +46,8 @@ function notify() {
 export const sceneStore = {
   get: () => currentConfig,
   set: (partial: Partial<SceneConfig>) => {
-    let newTheme = partial.theme ?? currentConfig.theme;
-    let newHex = partial.colorHex ?? THEME_COLORS[newTheme] ?? currentConfig.colorHex;
+    const newTheme = partial.theme ?? currentConfig.theme;
+    const newHex = partial.colorHex ?? THEME_COLORS[newTheme] ?? currentConfig.colorHex;
 
     currentConfig = {
       ...currentConfig,

@@ -4,12 +4,12 @@ import { person, site } from "@/lib/content";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: `${person.name} — Software Engineer & Python Developer`,
-    short_name: `${person.firstName} M`,
+    short_name: person.name,
     description: site.description,
     start_url: "/",
     display: "standalone",
-    background_color: "#0F0E0C",
-    theme_color: "#0F0E0C",
+    background_color: "#050506",
+    theme_color: "#050506",
     icons: [
       {
         src: "/icon.svg",

@@ -16,14 +16,14 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: "#0F0E0C",
+          background: "#050506",
           color: "#F2EFE8",
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div style={{ display: "flex", fontSize: 36, fontWeight: 700 }}>
-            M<span style={{ color: "#D6FF3F" }}>.</span>
+            AK<span style={{ color: "#FF2E3F" }}>.</span>
           </div>
           <div
             style={{
@@ -40,7 +40,7 @@ export default function OpenGraphImage() {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
-              fontSize: 110,
+              fontSize: 84,
               fontWeight: 800,
               letterSpacing: -4,
               lineHeight: 1,
@@ -48,7 +48,7 @@ export default function OpenGraphImage() {
               display: "flex",
             }}
           >
-            {person.firstName}&nbsp;M<span style={{ color: "#D6FF3F" }}>.</span>
+            {person.name}<span style={{ color: "#FF2E3F" }}>.</span>
           </div>
           <div
             style={{
@@ -56,13 +56,13 @@ export default function OpenGraphImage() {
               fontSize: 30,
               letterSpacing: 6,
               textTransform: "uppercase",
-              color: "#D6FF3F",
+              color: "#FF2E3F",
             }}
           >
             {`${person.role} @ ${person.company}`}
           </div>
           <div style={{ marginTop: 20, fontSize: 26, color: "#A39D92" }}>
-            Python · FastAPI · GCP · Docker · Microservices
+            LLM Agents · RAG · Voice AI · FastAPI
           </div>
         </div>
       </div>

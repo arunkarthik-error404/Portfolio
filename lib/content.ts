@@ -48,7 +48,7 @@ export const about = {
     "Agents that ship. Retrieval that's right. Inference that doesn't burn the budget.",
   paragraphs: [
     "I'm an AI Software Engineer at 10xScale.ai in Hyderabad, building agentic backends with LangGraph, AgentFlow and MCP/FastMCP — and the extraction, retrieval and voice pipelines around them.",
-    "My bias is toward what works in production: structured extraction over large document corpora with Gemini and Vertex AI, deterministic parsers instead of LLM calls wherever accuracy allows, and identity resolution that vetoes on hard identifiers before any fuzzy scoring.",
+    "My bias is toward what works in production: reliable, measurable systems over impressive demos. I reach for deterministic logic wherever accuracy matters, use models where they genuinely add value, and keep latency and cost in check as things scale.",
     "I studied Electrical and Electronics Engineering at BITS Pilani, and co-authored a peer-reviewed paper on phosphorene electrodes for supercapacitors in ACS Applied Energy Materials.",
   ],
   stats: ["LangGraph · MCP · RAG", "10xScale.ai — since Jul 2026", "Hyderabad / Remote"],

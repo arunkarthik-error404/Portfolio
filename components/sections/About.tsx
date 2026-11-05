@@ -6,7 +6,7 @@ export function About() {
   return (
     <section id="about" className="py-section">
       <div className="mx-auto grid w-full max-w-[90rem] gap-12 px-6 md:grid-cols-[2fr_3fr] md:gap-20 md:px-12">
-        <div data-animate="about-portrait" className="relative max-w-md">
+        <div data-animate="about-portrait" className="relative max-w-md self-start">
           <div className="overflow-hidden rounded-card border border-border">
             <Image
               src={person.portrait}

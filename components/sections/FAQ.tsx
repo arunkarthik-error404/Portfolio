@@ -15,7 +15,7 @@ export function FAQ() {
           {faqs.map((faq, index) => (
             <details
               key={index}
-              className="group rounded-card border border-border bg-surface/40 p-6 transition-all duration-300 hover:border-accent/40 open:border-accent/50 open:bg-surface/80 md:p-8"
+              className="group rounded-card border border-border bg-surface/40 p-6 transition-colors duration-300 hover:border-accent/40 open:border-accent/50 open:bg-surface/80 md:p-8"
               {...(index === 0 ? { open: true } : {})}
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-semibold tracking-tight text-text transition-colors group-hover:text-accent md:text-xl">
@@ -27,7 +27,7 @@ export function FAQ() {
                   +
                 </span>
               </summary>
-              <p className="mt-4 text-sm leading-relaxed text-muted md:text-base">
+              <p className="mt-4 text-sm leading-relaxed text-text/80 md:text-base">
                 {faq.answer}
               </p>
             </details>
